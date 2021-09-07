@@ -15,6 +15,10 @@ public class ParseProcessor {
         int shippedCounter = 0;
         int shippingCounter = 0;
 
+        List<String> orders = new ArrayList<>(ordersAndStatus.keySet());
+        System.out.println("Total orders in the report");
+        System.out.println(orders.size());
+
         for (Map.Entry<String, String> entry : ordersAndStatus.entrySet()) {
             if (entry.getValue().equals("Pending")){
                 pendingCounter++;
@@ -53,6 +57,10 @@ public class ParseProcessor {
         int shippedCounter = 0;
         int shippingCounter = 0;
         Set<String> distinctDates = new TreeSet<>();
+        List<String> orders = new ArrayList<>(entries.keySet());
+
+        System.out.println("Total orders in the report");
+        System.out.println(orders.size());
 
 
         for (Map.Entry<String, ReportEntry> reportEntry : entries.entrySet()) {
